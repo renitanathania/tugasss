@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <!-- NAV -->
+      <nav>
+        <a href="#" onclick="show('login', 'signup', 'barang');">Login</a>
+        <a href="#" onclick="show('sign-up', 'login', 'barang');">Signup</a>
+        <a href="#" onclick="show('barang', 'sign-up', 'login');">Pemilihan Barang</a>
+      </nav>
+
+      <!-- 1. LOGIN-->
+      <div id="login" class="login">
+        <h1>Login</h1>
+        <form action="" onsubmit ='login(event);'>
+          <input id="username" type="text" placeholder="Username" required>
+          <input id="password" type="password" placeholder="Password" required>
+          <button>Login</button>
+        </form>
+      </div>
+
+      <!-- 2. Sign Up -->
+      <div class="Sign-up hidden">
+        <h1>Sign-up</h1>
+        <form action="" onsubmit ='signup(event)'>
+          <input id="username-signup" type ="text" placeholder="Username" required>
+          <input id="password-signup" type ="password" placeholder="Password" required>
+          <input id="email-sign" type ="email" placeholder="Email" required>
+          <button>Sign Up</button>
+        </form>
+    </div>
+
+      <!-- 3. Pemilihan Barang -->
+      <div class="barang hidden">
+        <h1> Pemilihan Barang</h1>
+        <div class="pemilihan-barang">
+          <div class="kotak">
+              <img src="https://images.tokopedia.net/img/cache/700/product-1/2018/8/8/2962655/2962655_888f1c51-0681-4968-a822-4302d1ca7ba4_720_704.jpg" alt="">
+              <h3 class="nama__barang">Sepatu Futsal</h3>
+              <p class="harga__barang">Rp. 350.000,-</p>
+              <button class="harga__barang" onclick="showModal('Terima kasih telah memesan sepau futsal');">Pesan</p>
+          </div>
+          <div class="kotak">
+              <img src="https://images.tokopedia.net/img/cache/500-square/product-1/2018/10/4/4190736/4190736_13d6b54b-9f9a-4dad-9c39-3179823700e1.png.webp" alt="">
+              <h3 class="nama__barang">Sepatu Basket</h3>
+              <p class="harga __sepatu">Rp. 550.000,-</p>
+              <button class="pesan_barang" onclick="showModal('Stok sepatu basket saat ini kosong');">Pesan</button>
+          </div>
+          <div class="kotak">
+            <div class="kotak">
+              <img src="https://id-test-11.slatic.net/p/3312639b8da3d677556f190c3d01bc41.jpg_720x720q80.jpg_.webp" alt="">
+              <h3 class="nama__barang">Raket Badminton</h3>
+              <p class="pesan__barang">Rp. 400.000,-</p>
+              <button class="pesan_barang" onclick="showModal('Raket berhasil dipesan');">Pesan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <!-- Modal -->
+      <div class="modal hidden">
+        <div class="modal__content">
+          <h1 class="modal__message">Terima kasih telah membeli</h1>
+          <button onclick="closeModal();">Close</button>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
